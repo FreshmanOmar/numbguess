@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class NumbGuess {
     public static void main(String[] args) {
-        Scanner input;
         System.out.println("pick a number from 1 to 100");
-        Guesser(input = new Scanner(System.in);)
-    }
-    }
-
-
-    public static void Guesser(int inputnumb) {
+        Guesser();
+    } public static String Guesser() {
         //declare
+        String highest , high , highClose , right , lowClose , low , lowest;
+        Scanner input;
+        input = new Scanner(System.in);
+        int inputnumb;
         int randomnumb;
         int twentyOrMore, thirtyOrMore, threemore,negTwentyOrLess,negThirtyOrLess,negThreeLess;
         //initialize
@@ -24,24 +23,40 @@ public class NumbGuess {
         negTwentyOrLess = randomnumb - 20;
         negThirtyOrLess = randomnumb -30;
         negThreeLess = randomnumb -3;
+        highest = "Way too high";
+        high = "Too high";
+        highClose = "A little less";
+        right = "You got it!!";
+        lowClose ="A little more";
+        low = "Too low";
+        lowest = "Way too low";
+
+        inputnumb = input.nextInt();
         if (inputnumb >= twentyOrMore && inputnumb < thirtyOrMore) {
-                System.out.println("too high");
-            }
-            if (inputnumb >= thirtyOrMore) {
-                System.out.println(" Way too high");
-            }
-            if (inputnumb > randomnumb && inputnumb <= threemore) {
-                System.out.println("a little less");
-                if (inputnumb >= twentyOrMore && inputnumb < thirtyOrMore) {
-                    System.out.println("too low");
-                }
-                if (inputnumb >= thirtyOrMore) {
-                    System.out.println(" Way too low");
-                }
-                if (inputnumb > randomnumb && inputnumb <= negThreeLess) {
-                    System.out.println("a little more");
-
-
+            return high;
         }
-    }
+        if (inputnumb >= thirtyOrMore) {
+           return highest;
+        }
+        if (inputnumb > randomnumb && inputnumb <= threemore) {
+            return highClose;
+        }
+        if (inputnumb <= negTwentyOrLess && inputnumb > negThirtyOrLess) {
+            return low;
+        }
+        if (inputnumb <= negThirtyOrLess) {
+            return lowest;
+        }
+        if (inputnumb < randomnumb && inputnumb >= negThreeLess) {
+            return lowClose;
+        }
+        if (inputnumb == randomnumb){
+            return right;}
 }
+    }
+
+
+
+
+
+
