@@ -6,7 +6,7 @@ public class NumbGuess {
     public static void main(String[] args) {
         System.out.println("pick a number from 1 to 100");
         Guesser();
-    } public static String Guesser() {
+    } public static void Guesser() {
         //declare
         String highest , high , highClose , right , lowClose , low , lowest;
         Scanner input;
@@ -33,26 +33,30 @@ public class NumbGuess {
 
         inputnumb = input.nextInt();
         if (inputnumb >= twentyOrMore && inputnumb < thirtyOrMore) {
-            return high;
+            System.out.println(high);
         }
         if (inputnumb >= thirtyOrMore) {
-           return highest;
+            System.out.println(highest);
         }
         if (inputnumb > randomnumb && inputnumb <= threemore) {
-            return highClose;
+             System.out.println(highClose);
         }
         if (inputnumb <= negTwentyOrLess && inputnumb > negThirtyOrLess) {
-            return low;
+            System.out.println(low);
         }
         if (inputnumb <= negThirtyOrLess) {
-            return lowest;
+             System.out.println(lowest);
         }
         if (inputnumb < randomnumb && inputnumb >= negThreeLess) {
-            return lowClose;
+             System.out.println(lowClose);
         }
         if (inputnumb == randomnumb){
-            return right;}
-}
+            System.out.println(right);}
+        if (inputnumb >= 101 || inputnumb <= 0){
+            System.out.println("I SAID BETWEEN 1 AND 100");}
+
+
+    }
     }
 
 
