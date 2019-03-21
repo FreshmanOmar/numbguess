@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NumbGuess {
     public static void main(String[] args) {
-        System.out.println("pick a number from 1 to 100");
+        System.out.println("Pick a number from 1 to 100 You only get Two chances");
         Guesser();
     } public static void Guesser() {
         //declare
@@ -33,27 +33,29 @@ public class NumbGuess {
 
         inputnumb = input.nextInt();
         if (inputnumb >= twentyOrMore && inputnumb < thirtyOrMore) {
-            System.out.println(high);
+            System.out.println(high);inputnumb = input.nextInt();
         }
         if (inputnumb >= thirtyOrMore) {
-            System.out.println(highest);
+            System.out.println(highest);inputnumb = input.nextInt();
         }
         if (inputnumb > randomnumb && inputnumb <= threemore) {
-             System.out.println(highClose);
+             System.out.println(highClose);inputnumb = input.nextInt();
         }
         if (inputnumb <= negTwentyOrLess && inputnumb > negThirtyOrLess) {
-            System.out.println(low);
+            System.out.println(low);inputnumb = input.nextInt();
         }
         if (inputnumb <= negThirtyOrLess) {
-             System.out.println(lowest);
+             System.out.println(lowest);inputnumb = input.nextInt();
         }
         if (inputnumb < randomnumb && inputnumb >= negThreeLess) {
-             System.out.println(lowClose);
+             System.out.println(lowClose);inputnumb = input.nextInt();
         }
         if (inputnumb == randomnumb){
-            System.out.println(right);}
+            System.out.println(right);
+        }
         if (inputnumb >= 101 || inputnumb <= 0){
-            System.out.println("I SAID BETWEEN 1 AND 100");}
+            System.out.println("I SAID BETWEEN 1 AND 100"); inputnumb = input.nextInt();
+        }
 
 
     }
