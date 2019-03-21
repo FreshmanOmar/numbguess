@@ -33,28 +33,28 @@ public class NumbGuess {
 
         inputnumb = input.nextInt();
         if (inputnumb >= twentyOrMore && inputnumb < thirtyOrMore) {
-            System.out.println(high);inputnumb = input.nextInt();
+            System.out.println(high);
         }
         if (inputnumb >= thirtyOrMore) {
-            System.out.println(highest);inputnumb = input.nextInt();
+            System.out.println(highest);
         }
         if (inputnumb > randomnumb && inputnumb <= threemore) {
-             System.out.println(highClose);inputnumb = input.nextInt();
+             System.out.println(highClose);
         }
         if (inputnumb <= negTwentyOrLess && inputnumb > negThirtyOrLess) {
-            System.out.println(low);inputnumb = input.nextInt();
+            System.out.println(low);
         }
         if (inputnumb <= negThirtyOrLess) {
-             System.out.println(lowest);inputnumb = input.nextInt();
+             System.out.println(lowest);
         }
         if (inputnumb < randomnumb && inputnumb >= negThreeLess) {
-             System.out.println(lowClose);inputnumb = input.nextInt();
+             System.out.println(lowClose);
         }
         if (inputnumb == randomnumb){
             System.out.println(right);
         }
         if (inputnumb >= 101 || inputnumb <= 0){
-            System.out.println("I SAID BETWEEN 1 AND 100"); inputnumb = input.nextInt();
+            System.out.println("I SAID BETWEEN 1 AND 100 try again");
         }
 
 
